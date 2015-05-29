@@ -29,7 +29,7 @@ test <- function(conn){
     ## Run full H2O GLM with and without priors
     Log.info("Run a logistic regression with no regularization and alpha = 0 and beta constraints without priors.")
     glm_nopriors <- h2o.glm(x = indVars, y = depVars, training_frame = h2oData, family = family_type,
-                            stadardize = T, lambda = lambda, alpha = alpha,
+                            standardize = T, lambda = lambda, alpha = alpha,
                             beta_constraints = betaConstraints)
     Log.info("Run a logistic regression with no regularization and alpha = 0 and beta constraints with prior =
               total real probability.")
