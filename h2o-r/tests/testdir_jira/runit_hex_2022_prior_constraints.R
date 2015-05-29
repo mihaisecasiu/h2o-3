@@ -62,6 +62,8 @@ test.Priors.BetaConstraints <- function(conn) {
     library(AUC)
 
     h2o_pred <- as.data.frame(pred)
+    print(h2o_pred)
+    colnames(h2o_pred)
     h2o_roc  <- roc(h2o_pred$X1, factor(test.df[, depVars]))
     h2o_auc <- auc(h2o_roc)
 
