@@ -34,7 +34,7 @@ test <- function(conn){
     Log.info("Run a logistic regression with no regularization and alpha = 0 and beta constraints with prior =
               total real probability.")
     glm_priors <- h2o.glm(x = indVars, y = depVars, training_frame = h2oData, family = family_type, prior = totRealProb,
-                          stadardize = T, lambda = lambda, alpha = alpha, beta_constraints = betaConstraints)
+                          standardize = T, lambda = lambda, alpha = alpha, beta_constraints = betaConstraints)
 
 
     ## Check coefficients remained the same and the intercept is adjusted
